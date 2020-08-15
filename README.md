@@ -1,4 +1,4 @@
-# Google-Adsense
+# ASW-Google-Adsense
 Show google ads using Angular 10 latest version
 
 #### Add adsense code
