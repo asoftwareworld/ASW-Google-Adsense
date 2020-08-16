@@ -58,3 +58,6 @@ Uses global defaults which can be overriden via inputs
   [height]="108"
 ></asw-google-adsense>
 ```
+## donate
+<a href="https://paypal.me/asoftwareworld?locale.x=en_GB"><img src="blue.svg" height="40"></a>  
+If you enjoyed this project — or just feeling generous, consider buying me a beer. Cheers! :beers:
