@@ -3,18 +3,18 @@ import { InjectionToken } from '@angular/core';
 /**
  * Set optional global default values
  */
-export interface GoogleAdsenseConfig {
+export interface AswGoogleAdsenseConfig {
     /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
     adClient: string;
     /** ad slot/number */
     adSlot: string | number;
     /** data-ad-format default: auto */
     adFormat: string;
-    /** ins element display style */
+    /** asw element display style */
     display: string;
-    /** ins element height in px */
+    /** asw element height in px */
     width: number;
-    /** ins element width in px */
+    /** asw element width in px */
     height: number;
     /** used for in-feed ads */
     layout: string;
@@ -29,6 +29,6 @@ export interface GoogleAdsenseConfig {
     fullWidthResponsive: boolean;
 }
 
-export const ADSENSE_TOKEN = new InjectionToken<GoogleAdsenseConfig>(
-    'GoogleAdsenseConfig',
+export const ADSENSE_TOKEN = new InjectionToken<AswGoogleAdsenseConfig>(
+    'AswGoogleAdsenseConfig',
 );

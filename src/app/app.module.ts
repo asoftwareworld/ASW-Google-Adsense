@@ -1,17 +1,21 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import {GoogleAdsenseModule} from './google-adsense/google-adsense.module';
+import { AswGoogleAdsenseModule } from './asw-google-adsense/asw-google-adsense.module';
+
 @NgModule({
-  imports: [ BrowserModule, FormsModule,
-  GoogleAdsenseModule.forRoot({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AswGoogleAdsenseModule.forRoot({
       adClient: 'ca-pub-9010581920864857',
       adSlot: 1795662914,
-  }), ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  }),
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

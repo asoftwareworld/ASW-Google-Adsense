@@ -1,23 +1,23 @@
 import {
-    AfterViewInit,
-    ChangeDetectionStrategy,
-    Component,
-    Inject,
-    Input,
-    OnDestroy,
-    OnInit,
-    ViewChild,
-    ElementRef,
+  Component,
+  OnInit,
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Inject,
+  Input,
+  OnDestroy,
+  ViewChild,
+  ElementRef,
 } from '@angular/core';
- import { ADSENSE_TOKEN, GoogleAdsenseConfig } from './google-adsense-config';
+import { ADSENSE_TOKEN, AswGoogleAdsenseConfig } from './asw-google-adsense-config';
 
 @Component({
-    selector: 'asw-google-adsense',
-    templateUrl: './google-adsense.component.html',
-    styleUrls: ['./google-adsense.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'asw-google-adsense',
+  templateUrl: './asw-google-adsense.component.html',
+  styleUrls: ['./asw-google-adsense.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GoogleAdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
+export class AswGoogleAdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
 
     /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
     @Input() adClient: string;
@@ -26,11 +26,11 @@ export class GoogleAdsenseComponent implements OnInit, AfterViewInit, OnDestroy 
     @Input() adFormat: string;
     /** can be manually set if you need all ads on a page to have same id page-xxx */
     @Input() adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
-    /** ins element display style */
+    /** asw element display style */
     @Input() display: string;
-    /** ins element height in px */
+    /** asw element height in px */
     @Input() width: number;
-    /** ins element width in px */
+    /** asw element width in px */
     @Input() height: number;
     /** used for in-feed ads */
     @Input() layout: string;
@@ -45,13 +45,13 @@ export class GoogleAdsenseComponent implements OnInit, AfterViewInit, OnDestroy 
     /* used for flexible ads */
     @Input() fullWidthResponsive: boolean;
     /**
-     * classes applied to the ins element
+     * classes applied to the asw element
      */
     @Input() className: string;
-    @ViewChild('ins', { read: ElementRef, static: true }) ins: any;
+    @ViewChild('asw', { read: ElementRef, static: true }) asw: any;
 
     constructor(
-        @Inject(ADSENSE_TOKEN) private config: GoogleAdsenseConfig,
+        @Inject(ADSENSE_TOKEN) private config: AswGoogleAdsenseConfig,
     ) { }
 
     ngOnInit() {
@@ -72,8 +72,9 @@ export class GoogleAdsenseComponent implements OnInit, AfterViewInit, OnDestroy 
         this.adtest = use(this.adtest, config.adtest);
         this.fullWidthResponsive = use(this.fullWidthResponsive, config.fullWidthResponsive);
     }
+
     ngOnDestroy() {
-        const iframe = this.ins.nativeElement.querySelector('iframe');
+        const iframe = this.asw.nativeElement.querySelector('iframe');
         if (iframe && iframe.contentWindow) {
             iframe.src = 'about:blank';
             iframe.remove();

@@ -1,5 +1,5 @@
 # ASW-Google-Adsense
-Show google ads using Angular 10 latest version
+Show google ads for Angular application
 
 #### Add adsense code
 
@@ -11,12 +11,12 @@ Use the standard AdSense code somewhere in your `<head></head>` as you [normally
 
 #### Import NgModule
 
-Add GoogleAdsenseModule to the imports of your NgModule
+Add AswGoogleAdsenseModule to the imports of your NgModule
 ```
 @NgModule({
   imports: [
     // shown passing global defaults (optional)
-    AdsenseModule.forRoot({
+    AswGoogleAdsenseModule.forRoot({
       adClient: 'ca-pub-9010581920864857',
       adSlot: 1795662914,
     }),
@@ -47,7 +47,7 @@ Uses global defaults which can be overriden via inputs
 | pageLevelAds | boolean       | enable page-level ads                                                 |
 | timeOutRetry | boolean       | on first load sometimes adsense is not ready. retry's push after x ms |
 | adtest       | string        | sets up some sort of google test ad                                   |
-| className    | string        | add custom class names to the "ins" element                           |
+| className    | string        | add custom class names to the "aws" element                           |
 
 ```html
 <asw-google-adsense
