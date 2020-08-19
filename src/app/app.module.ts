@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AswGoogleAdsenseModule } from './asw-google-adsense/asw-google-adsense.module';
+import { GoogleAdsenseModule } from '@asoftwareworld/google-adsense';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { AswGoogleAdsenseModule } from './asw-google-adsense/asw-google-adsense.
   ],
   imports: [
     BrowserModule,
-    AswGoogleAdsenseModule.forRoot({
+    GoogleAdsenseModule.forRoot({
       adClient: 'ca-pub-9010581920864857',
       adSlot: 1795662914,
   }),

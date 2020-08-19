@@ -1,10 +1,16 @@
 # ASW-Google-Adsense
 
-Show google ads for Angular application
+Show google ads for Angular application with latest version of Angular. 
 
-#### Add adsense code
+## Install
 
-Use the standard AdSense code somewhere in your `<head></head>` as you [normally would](https://support.google.com/adsense/answer/7477845)
+```html
+npm install @asoftwareworld/google-adsense
+```
+
+#### Add google adsense code
+
+Use the standard AdSense code in your `index.html` file under `<head></head>` as you [normally would](https://support.google.com/adsense/answer/7477845)
 
 ```html
 <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
@@ -12,16 +18,23 @@ Use the standard AdSense code somewhere in your `<head></head>` as you [normally
 
 #### Import NgModule
 
-Add AswGoogleAdsenseModule to the imports of your NgModule
+And then include it in your module (see app.module.ts):
 ```
+import { GoogleAdsenseModule } from '@asoftwareworld/google-adsense';
+// ...
+
 @NgModule({
   imports: [
     // shown passing global defaults (optional)
-    AswGoogleAdsenseModule.forRoot({
+    GoogleAdsenseModule.forRoot({
       adClient: 'ca-pub-9010581920864857',
       adSlot: 1795662914,
     }),
     ...
+  ]
+  // ...
+})
+export class AppModule {}
 ```
 
 #### Show Ad
@@ -29,7 +42,13 @@ Add AswGoogleAdsenseModule to the imports of your NgModule
 Uses global defaults which can be overriden via inputs
 
 ```html
-<asw-google-adsense></asw-google-adsense>
+<asw-google-adsense
+  [adClient]="'ca-pub-9010581920864857'"
+  [adSlot]="1795662914"
+  [display]="'inline-block'"
+  [width]="320"
+  [height]="108"
+></asw-google-adsense>
 ```
 
 ## Inputs
@@ -50,15 +69,9 @@ Uses global defaults which can be overriden via inputs
 | adtest       | string        | sets up some sort of google test ad                                   |
 | className    | string        | add custom class names to the "asw" element                           |
 
-```html
-<asw-google-adsense
-  [adClient]="'ca-pub-9010581920864857'"
-  [adSlot]="1795662914"
-  [display]="'inline-block'"
-  [width]="320"
-  [height]="108"
-></asw-google-adsense>
-```
+## License
+MIT License.
+
 ## donate
 <a href="https://paypal.me/asoftwareworld?locale.x=en_GB"><img src="blue.svg" height="40"></a>  
 If you enjoyed this project — or just feeling generous, consider buying me a beer. Cheers! :beers:
