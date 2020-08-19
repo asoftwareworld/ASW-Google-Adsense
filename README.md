@@ -2,7 +2,7 @@
 
 Show google ads for Angular application with latest version of Angular. 
 
-## Install
+## Installation
 
 ```html
 npm install @asoftwareworld/google-adsense
