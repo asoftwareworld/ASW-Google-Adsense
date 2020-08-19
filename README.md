@@ -18,7 +18,7 @@ Use the standard AdSense code in your `index.html` file under `<head></head>` as
 
 #### Import NgModule
 
-And then include it in your module (see [app.module.ts](https://github.com/asoftwareworld/ASW-Google-Adsense/blob/master/src/app/app.module.ts)):
+And then include it in your module (see [app.module.ts](https://github.com/asoftwareworld/ASW-Google-Adsense/blob/master/src/app/app.module.ts) ):
 ```
 import { GoogleAdsenseModule } from '@asoftwareworld/google-adsense';
 // ...
