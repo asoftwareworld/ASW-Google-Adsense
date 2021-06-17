@@ -73,5 +73,5 @@ Uses global defaults which can be overriden via inputs
 MIT License.
 
 ## donate
-<a href="https://paypal.me/asoftwareworld?locale.x=en_GB"><img src="blue.svg" height="40"></a>  
+<a href="https://paypal.me/asoftwaresworld?locale.x=en_GB"><img src="blue.svg" height="40"></a>  
 If you enjoyed this project — or just feeling generous, consider buying me a beer. Cheers! :beers:
