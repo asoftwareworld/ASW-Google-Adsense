@@ -1,6 +1,39 @@
-# ASW-Google-Adsense
+<h1 align="center">ASW Google Adsense - show ads in angular app.</h1>
 
-Show google ads for Angular application with latest version of Angular. 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/69723522/225834944-8ea6f27d-d02a-4903-91c3-bc97f9209251.svg" alt="asw-logo" width="310px" height="100px"/>
+  <br>
+  <i>Show google ads for Angular application with latest version of Angular.</i>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://asoftwareworld.com/#/product/google-adsense"><strong>ASW Google Ads Demo</strong></a>
+  <br>
+</p>
+
+<p align="center">
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/asoftwareworld/ASW-Google-Adsense/issues">Submit an Issue</a>
+  ·
+  <a href="https://asoftwareworld.com/#/product/google-adsense">Blog</a>
+  <br>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@asoftwareworld/google-adsense">
+    <img src="https://badge.fury.io/js/%40asoftwareworld%2Fgoogle-adsense.svg" alt="CI status" />
+  </a>
+  <a href="https://github.com/asoftwareworld/ASW-Google-Adsense/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Discord conversation" />
+  </a>
+</p>
+
+<hr>
+
+# Documentation
 
 ## Installation
 
@@ -20,13 +53,13 @@ Use the standard AdSense code in your `index.html` file under `<head></head>` as
 
 And then include it in your module (see [app.module.ts](https://github.com/asoftwareworld/ASW-Google-Adsense/blob/master/src/app/app.module.ts) ):
 ```
-import { GoogleAdsenseModule } from '@asoftwareworld/google-adsense';
+import { AswGoogleAdsenseModule } from '@asoftwareworld/google-adsense';
 // ...
 
 @NgModule({
   imports: [
     // shown passing global defaults (optional)
-    GoogleAdsenseModule.forRoot({
+    AswGoogleAdsenseModule.forRoot({
       adClient: 'ca-pub-9010581920864857',
       adSlot: 1795662914,
     }),
